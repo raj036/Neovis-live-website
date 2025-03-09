@@ -253,7 +253,7 @@ export const UnitEditForm = (props) => {
 			const data = [props.unit];
 			if (data.length > 0) {
 				const qrLinks = data.map((item) =>
-					QRCode.toDataURL(`https://dev.neovis.io/scan_unit/${item.id}`, opts)
+					QRCode.toDataURL(`https://dev.neovis.io/scan_qr/${item.id}`, opts)
 				);
 				try {
 					const values = await Promise.all(qrLinks);
@@ -553,9 +553,9 @@ export const UnitEditForm = (props) => {
 	const onDefaultInventoryImageChange = (url, isDefault) => {
 		let data = url
 			? inventoryFiles?.map((_) => {
-					delete _.default;
-					return _;
-			  })
+				delete _.default;
+				return _;
+			})
 			: [...inventoryFiles];
 		const idx = data?.findIndex((_) => _.url === url);
 		if (idx >= 0) {
@@ -728,9 +728,9 @@ export const UnitEditForm = (props) => {
 	const onDefaultImageChange = (url, isDefault) => {
 		let data = url
 			? files?.map((_) => {
-					delete _.default;
-					return _;
-			  })
+				delete _.default;
+				return _;
+			})
 			: [...files];
 		const idx = data?.findIndex((_) => _.url === url);
 		if (idx >= 0) {
@@ -743,9 +743,9 @@ export const UnitEditForm = (props) => {
 	const onTaskImageChange = (url, isTaskImage) => {
 		let data = url
 			? files?.map((_) => {
-					delete _.isTaskImage;
-					return _;
-			  })
+				delete _.isTaskImage;
+				return _;
+			})
 			: [...files];
 		const idx = data?.findIndex((_) => _.url === url);
 		if (idx >= 0) {
@@ -988,8 +988,8 @@ export const UnitEditForm = (props) => {
 													value={
 														selProperty
 															? properties?.data?.data?.find(
-																	(_) => _.id === selProperty?.id
-															  )
+																(_) => _.id === selProperty?.id
+															)
 															: ""
 													}
 													disabled={isDisabled || unit}
@@ -998,7 +998,7 @@ export const UnitEditForm = (props) => {
 															{...params}
 															error={Boolean(
 																formik.touched.property_id &&
-																	formik.errors.property_id
+																formik.errors.property_id
 															)}
 															disabled={isDisabled || unit}
 															fullWidth
@@ -1028,8 +1028,8 @@ export const UnitEditForm = (props) => {
 													value={
 														selUnittype
 															? unittypes?.data?.find(
-																	(_) => _.id === selUnittype?.id
-															  )
+																(_) => _.id === selUnittype?.id
+															)
 															: ""
 													}
 													disabled={isDisabled}
@@ -1038,7 +1038,7 @@ export const UnitEditForm = (props) => {
 															{...params}
 															error={Boolean(
 																formik.touched.unit_type_id &&
-																	formik.errors.unit_type_id
+																formik.errors.unit_type_id
 															)}
 															disabled={isDisabled}
 															fullWidth
@@ -1118,7 +1118,7 @@ export const UnitEditForm = (props) => {
 													<TransformedInput
 														error={Boolean(
 															formik.touched.unit_condition &&
-																formik.errors.unit_condition
+															formik.errors.unit_condition
 														)}
 														helperText={
 															formik.touched.unit_condition &&
@@ -1185,14 +1185,14 @@ export const UnitEditForm = (props) => {
 
 												{Boolean(
 													formik.touched.description &&
-														formik.errors.description
+													formik.errors.description
 												) && (
-													<Box sx={{ mt: 2 }}>
-														<FormHelperText error>
-															{formik.errors.description}
-														</FormHelperText>
-													</Box>
-												)}
+														<Box sx={{ mt: 2 }}>
+															<FormHelperText error>
+																{formik.errors.description}
+															</FormHelperText>
+														</Box>
+													)}
 											</Grid>
 										</Grid>
 									</MainContainer>
@@ -1307,7 +1307,7 @@ export const UnitEditForm = (props) => {
 														<TransformedInput
 															error={Boolean(
 																formik.touched.province &&
-																	formik.errors.province
+																formik.errors.province
 															)}
 															helperText={
 																formik.touched.province &&
@@ -1334,7 +1334,7 @@ export const UnitEditForm = (props) => {
 														<TransformedInput
 															error={Boolean(
 																formik.touched.zip_code &&
-																	formik.errors.zip_code
+																formik.errors.zip_code
 															)}
 															type="number"
 															fullWidth
@@ -1365,7 +1365,7 @@ export const UnitEditForm = (props) => {
 															<TransformedInput
 																error={Boolean(
 																	formik.touched.country_code &&
-																		formik.errors.country_code
+																	formik.errors.country_code
 																)}
 																helperText={
 																	formik.touched.country_code &&
@@ -1629,7 +1629,7 @@ export const UnitEditForm = (props) => {
 											<Select
 												error={Boolean(
 													inventoryFormik.touched.category &&
-														inventoryFormik.errors.category
+													inventoryFormik.errors.category
 												)}
 												helperText={
 													inventoryFormik.touched.category &&
@@ -1657,10 +1657,10 @@ export const UnitEditForm = (props) => {
 													inventoryFormik.values.category === "Element"
 														? elementData?.data?.data
 														: inventoryFormik.values.category === "Amenity"
-														? amenityData?.data?.data
-														: inventoryFormik.values.category === "Product"
-														? productData?.data?.data
-														: []
+															? amenityData?.data?.data
+															: inventoryFormik.values.category === "Product"
+																? productData?.data?.data
+																: []
 												}
 												getOptionLabel={(option) =>
 													option.name ? option.name : ""
@@ -1673,39 +1673,39 @@ export const UnitEditForm = (props) => {
 														{...params}
 														error={Boolean(
 															inventoryFormik.touched[
-																inventoryFormik.values.category === "Element"
-																	? "cat_element_id"
-																	: inventoryFormik.values.category ===
-																	  "Product"
+															inventoryFormik.values.category === "Element"
+																? "cat_element_id"
+																: inventoryFormik.values.category ===
+																	"Product"
 																	? "cat_product_id"
 																	: "cat_amentity_id"
 															] &&
-																inventoryFormik.errors[
-																	inventoryFormik.values.category === "Element"
-																		? "cat_element_id"
-																		: inventoryFormik.values.category ===
-																		  "Product"
-																		? "cat_product_id"
-																		: "cat_amentity_id"
-																]
+															inventoryFormik.errors[
+															inventoryFormik.values.category === "Element"
+																? "cat_element_id"
+																: inventoryFormik.values.category ===
+																	"Product"
+																	? "cat_product_id"
+																	: "cat_amentity_id"
+															]
 														)}
 														// disabled={isDisabled || unit}
 														fullWidth
 														required
 														helperText={
 															inventoryFormik.touched[
-																inventoryFormik.values.category === "Element"
-																	? "cat_element_id"
-																	: inventoryFormik.values.category ===
-																	  "Product"
+															inventoryFormik.values.category === "Element"
+																? "cat_element_id"
+																: inventoryFormik.values.category ===
+																	"Product"
 																	? "cat_product_id"
 																	: "cat_amentity_id"
 															] &&
 															inventoryFormik.errors[
-																inventoryFormik.values.category === "Element"
-																	? "cat_element_id"
-																	: inventoryFormik.values.category ===
-																	  "Product"
+															inventoryFormik.values.category === "Element"
+																? "cat_element_id"
+																: inventoryFormik.values.category ===
+																	"Product"
 																	? "cat_product_id"
 																	: "cat_amentity_id"
 															]
@@ -1768,7 +1768,7 @@ export const UnitEditForm = (props) => {
 										<TextField
 											error={Boolean(
 												inventoryFormik.touched.name &&
-													inventoryFormik.errors.name
+												inventoryFormik.errors.name
 											)}
 											fullWidth
 											helperText={
@@ -1784,13 +1784,13 @@ export const UnitEditForm = (props) => {
 											onChange={inventoryFormik.handleChange}
 											required
 											value={inventoryFormik.values.name}
-											// disabled={isDisabled}
+										// disabled={isDisabled}
 										/>
 
 										<TextField
 											error={Boolean(
 												inventoryFormik.touched.code &&
-													inventoryFormik.errors.code
+												inventoryFormik.errors.code
 											)}
 											fullWidth
 											helperText={
@@ -1806,7 +1806,7 @@ export const UnitEditForm = (props) => {
 											onChange={inventoryFormik.handleChange}
 											required
 											value={inventoryFormik.values.code}
-											// disabled={isDisabled}
+										// disabled={isDisabled}
 										/>
 
 										<FormControl
@@ -1819,7 +1819,7 @@ export const UnitEditForm = (props) => {
 											<Select
 												error={Boolean(
 													inventoryFormik.touched.area_type &&
-														inventoryFormik.errors.area_type
+													inventoryFormik.errors.area_type
 												)}
 												helperText={
 													inventoryFormik.touched.area_type &&
@@ -1853,7 +1853,7 @@ export const UnitEditForm = (props) => {
 											<Select
 												error={Boolean(
 													inventoryFormik.touched.status &&
-														inventoryFormik.errors.status
+													inventoryFormik.errors.status
 												)}
 												helperText={
 													inventoryFormik.touched.status &&
@@ -1866,7 +1866,7 @@ export const UnitEditForm = (props) => {
 												onBlur={inventoryFormik.handleBlur}
 												onChange={inventoryFormik.handleChange}
 												value={inventoryFormik.values.status}
-												// disabled={isDisabled}
+											// disabled={isDisabled}
 											>
 												{STATUSES?.map((_status) => (
 													<MenuItem key={_status.value} value={_status.value}>
@@ -1886,7 +1886,7 @@ export const UnitEditForm = (props) => {
 											sx={{ mt: 2 }}
 											error={Boolean(
 												inventoryFormik.touched.quantity &&
-													inventoryFormik.errors.quantity
+												inventoryFormik.errors.quantity
 											)}
 											helperText={
 												inventoryFormik.touched.quantity &&
@@ -1897,14 +1897,14 @@ export const UnitEditForm = (props) => {
 											onBlur={inventoryFormik.handleBlur}
 											onChange={inventoryFormik.handleChange}
 											value={inventoryFormik.values.quantity}
-											// disabled={isDisabled}
-											// InputProps={{
-											//   startAdornment: (
-											//     <InputAdornment sx={{ mr: 1 }}>
-											//       <AttachMoney />
-											//     </InputAdornment>
-											//   ),
-											// }}
+										// disabled={isDisabled}
+										// InputProps={{
+										//   startAdornment: (
+										//     <InputAdornment sx={{ mr: 1 }}>
+										//       <AttachMoney />
+										//     </InputAdornment>
+										//   ),
+										// }}
 										/>
 
 										<TextField
@@ -1917,7 +1917,7 @@ export const UnitEditForm = (props) => {
 											sx={{ mt: 2 }}
 											error={Boolean(
 												inventoryFormik.touched.price &&
-													inventoryFormik.errors.price
+												inventoryFormik.errors.price
 											)}
 											helperText={
 												inventoryFormik.touched.price &&
@@ -1948,18 +1948,18 @@ export const UnitEditForm = (props) => {
 												placeholder="Enter inventory description"
 												sx={{ height: 300 }}
 												value={inventoryFormik.values.description}
-												// disabled={isDisabled}
+											// disabled={isDisabled}
 											/>
 											{Boolean(
 												inventoryFormik.touched.description &&
-													inventoryFormik.errors.description
+												inventoryFormik.errors.description
 											) && (
-												<Box sx={{ mt: 2 }}>
-													<FormHelperText error>
-														{inventoryFormik.errors.description}
-													</FormHelperText>
-												</Box>
-											)}
+													<Box sx={{ mt: 2 }}>
+														<FormHelperText error>
+															{inventoryFormik.errors.description}
+														</FormHelperText>
+													</Box>
+												)}
 										</Box>
 
 										<Box>
@@ -1980,18 +1980,18 @@ export const UnitEditForm = (props) => {
 												placeholder="Enter inventory comment"
 												sx={{ height: 300 }}
 												value={inventoryFormik.values.comment}
-												// disabled={isDisabled}
+											// disabled={isDisabled}
 											/>
 											{Boolean(
 												inventoryFormik.touched.comment &&
-													inventoryFormik.errors.comment
+												inventoryFormik.errors.comment
 											) && (
-												<Box sx={{ mt: 2 }}>
-													<FormHelperText error>
-														{inventoryFormik.errors.comment}
-													</FormHelperText>
-												</Box>
-											)}
+													<Box sx={{ mt: 2 }}>
+														<FormHelperText error>
+															{inventoryFormik.errors.comment}
+														</FormHelperText>
+													</Box>
+												)}
 										</Box>
 
 										<Box>
@@ -2013,7 +2013,7 @@ export const UnitEditForm = (props) => {
 												onRemove={handleInventoryRemove}
 												onRemoveAll={handleInventoryRemoveAll}
 												maxFiles={1}
-												// disabled={isDisabled}
+											// disabled={isDisabled}
 											/>
 										</Box>
 
@@ -2035,7 +2035,7 @@ export const UnitEditForm = (props) => {
 												onDrop={handleInventoryDrop}
 												onRemove={handleInventoryRemove}
 												onRemoveAll={handleInventoryRemoveAll}
-												// disabled={isDisabled}
+											// disabled={isDisabled}
 											/>
 										</Box>
 
@@ -2077,98 +2077,98 @@ export const UnitEditForm = (props) => {
 
 				{assetQrData?.length && props.unit
 					? assetQrData?.map((qrCode, qrid) => {
-							return (
-								<Modal
-									key={qrid}
-									open={open}
-									onClose={() => setAssetQrData([])}
-									aria-labelledby="modal-modal-title"
-									aria-describedby="modal-modal-description"
-								>
-									<StyledPopup>
-										<div
-											ref={(el) => (qrRef.current[qrid] = el)}
-											key={qrid}
-											style={{
+						return (
+							<Modal
+								key={qrid}
+								open={open}
+								onClose={() => setAssetQrData([])}
+								aria-labelledby="modal-modal-title"
+								aria-describedby="modal-modal-description"
+							>
+								<StyledPopup>
+									<div
+										ref={(el) => (qrRef.current[qrid] = el)}
+										key={qrid}
+										style={{
+											display: "flex",
+											paddingTop: 20,
+											paddingBottom: 20,
+											justifyContent: "center",
+											alignItems: "center",
+											flexDirection: "column",
+										}}
+									>
+										<Box
+											sx={{
 												display: "flex",
-												paddingTop: 20,
-												paddingBottom: 20,
+												flexDirection: "row",
 												justifyContent: "center",
 												alignItems: "center",
-												flexDirection: "column",
+												mb: 2,
 											}}
 										>
-											<Box
+											<Logo
 												sx={{
-													display: "flex",
-													flexDirection: "row",
-													justifyContent: "center",
-													alignItems: "center",
-													mb: 2,
-												}}
-											>
-												<Logo
-													sx={{
-														height: 42,
-														width: 42,
-													}}
-												/>
-												<Typography
-													style={{
-														fontWeight: "600",
-														fontSize: 20,
-														textAlign: "center",
-													}}
-												>
-													Neovis
-												</Typography>
-											</Box>
-											<img
-												src={qrCode}
-												alt="Asset qr code"
-												style={{
-													width: 200,
-													height: 200,
+													height: 42,
+													width: 42,
 												}}
 											/>
-											{[props.unit].map(
-												(item, id) =>
-													qrid === id && (
-														<div
-															key={id}
+											<Typography
+												style={{
+													fontWeight: "600",
+													fontSize: 20,
+													textAlign: "center",
+												}}
+											>
+												Neovis
+											</Typography>
+										</Box>
+										<img
+											src={qrCode}
+											alt="Asset qr code"
+											style={{
+												width: 200,
+												height: 200,
+											}}
+										/>
+										{[props.unit].map(
+											(item, id) =>
+												qrid === id && (
+													<div
+														key={id}
+														style={{
+															display: "flex",
+															flexDirection: "column",
+															justifyContent: "center",
+															alignItems: "center",
+														}}
+													>
+														<Typography
 															style={{
-																display: "flex",
-																flexDirection: "column",
-																justifyContent: "center",
-																alignItems: "center",
+																fontWeight: "700",
+																marginTop: 10,
+																fontSize: 30,
 															}}
 														>
-															<Typography
-																style={{
-																	fontWeight: "700",
-																	marginTop: 10,
-																	fontSize: 30,
-																}}
-															>
-																{item.unit_name}
-															</Typography>
-														</div>
-													)
-											)}
-											{props.unit && assetQrData?.length && (
-												<Button
-													color="error"
-													sx={{ mt: 5 }}
-													onClick={handleQrCodePrint}
-												>
-													Downoad QR code
-												</Button>
-											)}
-										</div>
-									</StyledPopup>
-								</Modal>
-							);
-					  })
+															{item.unit_name}
+														</Typography>
+													</div>
+												)
+										)}
+										{props.unit && assetQrData?.length && (
+											<Button
+												color="error"
+												sx={{ mt: 5 }}
+												onClick={handleQrCodePrint}
+											>
+												Downoad QR code
+											</Button>
+										)}
+									</div>
+								</StyledPopup>
+							</Modal>
+						);
+					})
 					: null}
 
 				{
