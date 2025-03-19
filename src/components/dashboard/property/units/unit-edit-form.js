@@ -253,7 +253,7 @@ export const UnitEditForm = (props) => {
 			const data = [props.unit];
 			if (data.length > 0) {
 				const qrLinks = data.map((item) =>
-					QRCode.toDataURL(`https://dev.neovis.io/scan_qr/${item.id}`, opts)
+					QRCode.toDataURL(`192.168.29.139:3000/scan_qr/${item.id}`, opts)
 				);
 				try {
 					const values = await Promise.all(qrLinks);

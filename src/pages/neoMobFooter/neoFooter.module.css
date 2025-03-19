@@ -1,0 +1,472 @@
+.whatIsDpl {
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    top: 0;
+    left: 30%;
+    display: inline-block;
+  }
+  .colorOverlayIcon {
+    position: absolute;
+    height: 58.7%;
+    width: 12.5%;
+    top: 28.26%;
+    right: 87.5%;
+    bottom: 13.04%;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .whatIsDplParent {
+    width: 40px;
+    height: 9.2px;
+    position: relative;
+    display: none;
+  }
+  .requestNowPage1Child {
+    align-self: stretch;
+    height: 554px;
+    position: relative;
+    background-color: var(--color-ghostwhite-200);
+    display: none;
+  }
+  .frameChild {
+    height: 2px;
+    flex: 1;
+    position: relative;
+    border-radius: var(--br-10xs);
+    background-color: var(--color-mediumseagreen);
+    z-index: 1;
+  
+    top: 6px;
+  }
+  .rectangleWrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 var(--padding-2xs) 0 0;
+  }
+  .groupIcon {
+    width: 51.7px;
+    height: 45px;
+    position: relative;
+    object-fit: contain;
+    z-index: 1;
+  }
+  .frameContainer,
+  .frameWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 0;
+  }
+  .frameContainer {
+    align-self: stretch;
+    flex: 1;
+    align-items: flex-end;
+    gap: 46px;
+  }
+  .frameWrapper {
+    margin-left: -154px;
+    height: 107px;
+    width: 150.7px;
+    align-items: flex-start;
+    padding: var(--padding-sm) 0 0;
+    box-sizing: border-box;
+    min-width: 150.7px;
+  }
+  .frameItem,
+  .xmlid2Icon {
+    position: absolute;
+    margin: 0 !important;
+    z-index: 1;
+  }
+  .frameItem {
+    height: 2px;
+    width: 34px;
+    top: 20px;
+    right: -6px;
+    border-radius: var(--br-10xs);
+    background-color: var(--color-mediumseagreen);
+  }
+  .xmlid2Icon {
+    width: 40px;
+    height: 3px;
+    bottom: 0;
+    left: 84px;
+  }
+  .whatIsDpl1 {
+    align-self: stretch;
+    height: 68px;
+    position: relative;
+    line-height: 15px;
+    display: inline-block;
+    flex-shrink: 0;
+    z-index: 3;
+    /*  */
+    margin-left: 6px;
+    margin-top: 10px;
+  }
+  .frameInner {
+    width: 134px;
+    height: 138px;
+    position: relative;
+    border-radius: var(--br-8xs);
+    display: none;
+  }
+  .frameChild1 {
+    height: 53.8px;
+    width: 55px;
+    position: relative;
+    z-index: 1;
+  }
+  .frameWrapper1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 var(--padding-20xl) 0 var(--padding-21xl);
+  }
+  .frameChild2 {
+    align-self: stretch;
+    height: 1px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 2;
+  }
+  .whatIsDpl2 {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+  }
+  .dPLQuestionPair {
+    align-self: stretch;
+    /* display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start; */
+    padding: 0 var(--padding-8xl);
+  }
+  .frameParent3,
+  .vectorParent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .frameParent3 {
+    align-self: stretch;
+    align-items: flex-start;
+    gap: var(--gap-2xs);
+  }
+  .vectorParent {
+    flex: 1;
+    box-shadow: 2px 10px 30px #e9e8fc;
+    border-radius: var(--br-8xs);
+    background-color: var(--color-white);
+    border: 0 solid var(--color-mediumseagreen);
+    box-sizing: border-box;
+    align-items: flex-end;
+    padding: var(--padding-3xl) 0 var(--padding-base);
+    gap: 20.2px;
+    min-width: 87px;
+    z-index: 1;
+  }
+  .xmlid2Icon1 {
+    height: 3px;
+    width: 40px;
+    position: absolute;
+    margin: 0 !important;
+    top: 61px;
+    right: -35px;
+    z-index: 1;
+  }
+  .frameParent2,
+  .xmlid2Group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .xmlid2Group {
+    flex: 1;
+    position: relative;
+    min-width: 87px;
+  }
+  .frameParent2 {
+    align-self: stretch;
+    gap: var(--gap-2xs);
+  }
+  .frameChild3 {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    width: 40.2px;
+    height: 40.1px;
+    z-index: 2;
+  }
+  .frameChild4,
+  .frameIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .frameIcon {
+    top: 11px;
+    left: 13px;
+    width: 34px;
+    height: 40.6px;
+    overflow: hidden;
+    z-index: 3;
+  }
+  .frameParent6 {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 54px;
+  }
+  .frameParent5 {
+    height: 52px;
+    flex: 1;
+    position: relative;
+  }
+  .frameWrapper2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-19xl) 0 var(--padding-17xl);
+  }
+  .frameParent7 {
+    align-self: stretch;
+    flex-direction: column;
+    gap: var(--gap-smi);
+  }
+  .frameParent4,
+  .frameParent7,
+  .vectorGroup {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .vectorGroup {
+    flex: 1;
+    border-radius: var(--br-8xs);
+    background-color: var(--color-white);
+    flex-direction: column;
+    padding: var(--padding-5xl) 0 var(--padding-base);
+    gap: var(--gap-lg);
+    z-index: 1;
+  }
+  .frameParent4 {
+    align-self: stretch;
+    flex-direction: row;
+    gap: var(--gap-2xs);
+    color: var(--color-lightsteelblue-100);
+  }
+  .frameParent1 {
+    flex: 1;
+    flex-direction: column;
+    gap: var(--gap-3xs);
+  }
+  .frameDiv,
+  .frameParent1,
+  .xmlid2Parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .frameDiv {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 var(--padding-4xs) 0 var(--padding-7xs);
+    margin-top: -13px;
+    text-align: center;
+    font-size: var(--font-size-xs-5);
+    color: var(--color-mediumslateblue);
+  }
+  .xmlid2Parent {
+    width: 294px;
+    flex-direction: column;
+    padding: 0 0 var(--padding-5xl);
+    box-sizing: border-box;
+    position: relative;
+    min-width: 294px;
+    flex-shrink: 0;
+  }
+  .frameChild6,
+  .frameGroup {
+    align-self: stretch;
+    position: relative;
+  }
+  .frameGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 0 var(--padding-20xl) 0 42px;
+  }
+  .frameChild6 {
+    border-radius: var(--br-10xs);
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    z-index: 1;
+  }
+  .frameParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-mid);
+    text-align: left;
+    font-size: var(--font-size-3xs);
+    color: var(--color-black);
+    font-family: var(--font-dm-sans);
+  }
+  .logoButtonIcon {
+    width: 41px;
+    height: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  .logoButtonWrapper {
+    height: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-lg) 0 0;
+    box-sizing: border-box;
+  }
+  .whatIsDpl4 {
+    position: relative;
+    z-index: 1;
+    top: 13px;
+  }
+  .whatIsDplContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-9xs) var(--padding-5xs) 0 0;
+  }
+  .fullLogo2,
+  .groupIcon1 {
+    position: relative;
+    z-index: 1;
+  }
+  .fullLogo2 {
+    height: 23px;
+    width: 79px;
+    object-fit: cover;
+  }
+  .groupIcon1 {
+    width: 31.9px;
+    height: 39px;
+  }
+  .groupWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-7xl) 0 0;
+  }
+  .frameParent8,
+  .fullLogo2Parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+  .fullLogo2Parent {
+    justify-content: flex-start;
+    gap: var(--gap-3xs);
+  }
+  .frameParent8,
+  /* .requestNowPage1Inner {
+    box-sizing: border-box;
+    max-width: 100%;
+  } */
+  .frameParent8 {
+    height: 56px;
+    justify-content: flex-start;
+    padding: 0 0 var(--padding-18xl);
+    gap: var(--gap-12xs);
+  }
+  .requestNowPage1Inner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* padding: 0 var(--padding-2xl) 0 var(--padding-3xl); */
+    font-size: var(--font-size-3xs);
+    color: var(--color-mediumslateblue);
+  }
+  .requestNowPage1 {
+    max-width: 426px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    /* background-color: var(--color-ghostwhite-200); */
+    background-image: url("/static/neoMobScan/backgroundimage.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--gap-4xl);
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: var(--font-size-2xs);
+    color: var(--color-lightsteelblue-200);
+    font-family: var(--font-dm-sans);
+  }
+  
+  @media screen and (max-width: 426px) {
+    .frameWrapper {
+      margin-left: -185px;
+    }
+  }
+  
+  @media screen and (max-width: 376px) {
+    .frameWrapper {
+      margin-left: -154px;
+    }
+  }
+  
+  @media screen and (max-width: 321px) {
+    .frameChild {
+      top: -20px;
+    }
+  
+    .frameItem {
+      display: none;
+    }
+  
+    .frameGroup {
+      padding: 0;
+    }
+  
+    .frameWrapper {
+      display: none;
+    }
+  
+    .whatIsDpl1 {
+      margin: 0 auto;
+    }
+  }
+  

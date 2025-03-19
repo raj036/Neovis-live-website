@@ -1,0 +1,19 @@
+.mainWrapBook {
+  max-width: 426px;
+  margin: 0 auto;
+  width: 100%;
+  background-image: url("/static/media/backgroundimage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+  /* gap: var(--gap-4xl); */
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-2xs);
+  color: var(--color-lightsteelblue-200);
+  font-family: var(--font-dm-sans);
+}

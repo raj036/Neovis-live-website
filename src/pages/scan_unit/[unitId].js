@@ -17,6 +17,8 @@ import { QuillEditor } from '../../components/quill-editor'
 import { height } from '@mui/system'
 import { Loader } from '../../components/loader'
 import Image from "next/image";
+
+import styles from "./unitID.module.css"
 const unitLogo = "/static/bhavan-logo-new-aug-2023-03.jpg"
 
 const UnitScan = () => {
@@ -252,7 +254,7 @@ const UnitScan = () => {
             <Head>
                 <title>Dashboard: Unit Scan</title>
             </Head>
-            <Box
+            <div
                 component="main"
                 sx={{
                     flexGrow: 1,
@@ -262,7 +264,7 @@ const UnitScan = () => {
                 {(unitLoading || productLoading || checkListLoading) &&
                     <Loader />
                 }
-                <Container maxWidth="md">
+                <div className={styles.mainWrapBook}>
                     <div>
                         {unitId && (
                             <Box>
@@ -285,17 +287,18 @@ const UnitScan = () => {
                         </Box>
                     )}
                     {filteredProducts.length > 0 ? filteredProducts.map((elItem, idx) =>
+                    <div className='menu'>
                         <Card key={idx} sx={{ mx: 2, my: 1 }}>
                             <CardContent>
                                 <Box sx={{
-                                    display: 'flex', flexDirection: 'row',
+                                    display: 'flex ', flexDirection: 'row',
                                     alignItems: 'center', justifyContent: 'space-between',
                                     // border: '1px solid black'
                                 }}>
                                     <Typography variant="subtitle2" sx={{ minWidth: '60%' }}>
                                         {elItem.name}
                                     </Typography>
-                                    <TextField
+                                    <input
                                         type="number"
                                         variant="outlined"
                                         size="small"
@@ -363,6 +366,7 @@ const UnitScan = () => {
                                 />
                             </CardContent>
                         </Card>
+                        </div>
                     ) :
                         <Typography variant="h6" textAlign={'center'} sx={{ alignItems: 'center' }}>No products available for this unit</Typography>
                     }
@@ -388,8 +392,8 @@ const UnitScan = () => {
                     }
                     <Typography variant="h6" sx={{ alignItems: 'center' }}>Our working hours are 10am to 5pm.</Typography>
                     <Typography variant="h6" sx={{ alignItems: 'center', mt: 2 }}>For any assistance you can reach us 24/7 on +971-527843672. Mr.Vikrant will be available for assistance.</Typography>
-                </Container>
-            </Box>
+                </div>
+            </div>
         </Box>
     )
 }
