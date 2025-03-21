@@ -1,15 +1,42 @@
+/* Main container for the page */
 .mainWrapBook {
   max-width: 426px;
   margin: 0 auto;
   width: 100%;
-  background-image: url("/static/media/backgroundimage.png");
+  background-color: #f5f7fa; /* From last definition */
+  min-height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-2xs);
+  color: var(--color-lightsteelblue-200);
+  font-family: var(--font-dm-sans);
+  /* background-image: url("public/backgroundimage.png"); */
+
+
+}
+.main{
+  background-color: white;
+}
+
+.requestNowPage {
+  max-width: 426px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* min-height: 100vh; */
-  /* gap: var(--gap-4xl); */
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-4xl);
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
@@ -17,3 +44,516 @@
   color: var(--color-lightsteelblue-200);
   font-family: var(--font-dm-sans);
 }
+
+.requestNowPage2 {
+  max-width: 426px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  background-color: var(--color-ghostwhite-200);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 27.5px;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-2xs);
+  color: var(--color-lightsteelblue-200);
+  font-family: var(--font-dm-sans);
+}
+
+.requestNowPage2Child {
+  align-self: stretch;
+  height: 719px;
+  position: relative;
+  background-color: var(--color-ghostwhite-200);
+  display: none;
+}
+
+/* Header section */
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 5px;
+  text-decoration: none;
+  margin-left: 0;
+  margin-right: 0;
+
+  /* max-width: 141%; */
+}
+
+/* Back button */
+.backButton {
+  display: flex;
+  align-items: center;
+  color: #007bff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  /* padding-left: 40px;
+  padding-top: 15px;
+  margin-bottom: 20px; */
+}
+
+.backButton::before {
+  content: "<";
+  margin-right: 5px;
+  color: rgb(30, 210, 30);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.navItem {
+  padding: 10px 15px;
+  background-color: #f8f7ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.navItem.active {
+  color: #007bff;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Property details */
+.propertyDetails {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Grid layouts */
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.parent {
+  flex: 1 1 calc(50% - 10px);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0 10px;
+}
+
+/* Service card */
+.serviceCard {
+  background-color: #fff; /* From last definition */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.cardContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Count styles */
+.countContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.countWrapper {
+  display: flex; /* From last definition */
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  width: 100%;
+
+}
+
+.count {
+  font-weight: bold;
+  color: #333;
+  /* margin-right: 10px; */
+  font-size: 13px;
+  margin-left: 5px;
+
+}
+
+.span {
+  color: var(--color-mediumslateblue);
+}
+
+/* Service details */
+.serviceId {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.serviceTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.serviceDescription {
+  font-size: 14px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* Input and textarea */
+.input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inputField {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+}
+
+.textArea {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Buttons */
+.bookButton {
+  background-color: #007bff; /* From last definition */
+  color: white;
+  padding: 5px 9px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.bookButton:hover {
+  background-color: #0056b3;
+}
+
+.bookButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.greenButton {
+  background-color: #4caf50;
+}
+
+.purpleButton {
+  background-color: #9f9cce;
+}
+
+/* Icons */
+.prodIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.groupIcon {
+  height: 45px;
+  width: 51.7px;
+  position: absolute;
+  margin: 0 !important;
+  top: 15px;
+  left: -13px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.colorOverlayIcon {
+  position: absolute;
+  height: 58.33%;
+  width: 12.5%;
+  top: 27.5%;
+  right: 87.5%;
+  bottom: 14.17%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.colorOverlayIcon1 {
+  width: 5px;
+  height: 7.6px;
+  position: relative;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* Miscellaneous */
+.whatIsDpl {
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  top: 0;
+  left: 30%;
+  display: inline-block;
+}
+
+.whatIsDplParent {
+  width: 40px;
+  height: 12px;
+  position: relative;
+  display: none;
+}
+
+.whatIsDplContainer {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 42px;
+  z-index: 1;
+}
+
+.whatIsDpl1 {
+  font-size: 10px;
+  margin: 0 auto;
+  flex: 1;
+  position: relative;
+  line-height: 11px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.whatIsDpl2 {
+  font-size: var(--font-size-3xs);
+  color: var(--color-black);
+  margin: 0 auto;
+  position: relative;
+  font-weight: 500;
+  z-index: 2;
+  min-width: 99px;
+}
+
+.whatIsDpl3 {
+  margin: 0 auto;
+  position: relative;
+  font-weight: 500;
+  z-index: 2;
+  min-width: 97px;
+}
+
+.whatIsDpl4 {
+  font-size: 12px;
+  border-color: transparent;
+  border-radius: 5px;
+  width: 70px;
+  background-color: #9f9cce;
+  position: relative;
+  display: inline-block;
+  min-width: 20px;
+  z-index: 3;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--color-mediumslateblue);
+}
+
+.whatIsDpl4:hover {
+  background-color: var(--color-mediumseagreen);
+}
+
+.whatIsDpl5 {
+  position: relative;
+  z-index: 1;
+}
+
+.rectangleGroup {
+  min-width: 446px;
+  border-radius: var(--br-9xs);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-6xs) var(--padding-29xl);
+  box-sizing: border-box;
+  gap: var(--gap-6xs);
+  max-width: 141%;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.vectorParent {
+  width: 188px;
+  justify-content: space-evenly;
+  height: 150px;
+  box-shadow: 2px 10px 30px #e9e8fc;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 0 solid var(--color-mediumseagreen);
+  flex-direction: column;
+  padding: var(--padding-mini) var(--padding-smi) var(--padding-lg) var(--padding-2xs);
+  z-index: 1;
+}
+
+/* Footer */
+.footer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-6xl);
+  max-width: 100%;
+}
+
+.footerChild {
+  align-self: stretch;
+  border-radius: var(--br-10xs);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.footerIcon {
+  width: 41px;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.footerText {
+  font-size: 12px;
+  color: #888;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* No products message */
+.noProducts {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin: 20px 0;
+}
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes the textarea to the bottom */
+  height: 100%; /* Ensures the container takes up the full height of the card */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.textArea {
+  margin-top: auto; /* Ensures the textarea is pushed to the bottom */
+  width: 100%; /* Makes the textarea take the full width */
+  min-height: 60px; /* Adjust height as needed */
+  resize: vertical; /* Allows vertical resizing only */
+  box-sizing: border-box; /* Ensures padding/border are included in the width */
+}
+
+/* Media Queries */
+@media (max-width: 425px) {
+  .serviceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navItem {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .serviceGrid {
+    grid-template-columns: 1fr;
+    padding: 0 30px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navItem {
+    flex: 1 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .rectangleGroup {
+    min-width: 386px;
+  }
+}
+
+@media (max-width: 320px) {
+  .serviceCard {
+    padding: 10px;
+  }
+
+  .rectangleGroup {
+    min-width: 336px;
+  }
+}
+
+div.headerSection {
+  width: 100% !important;
+  background-color: white !important;
+}
+
+
+/* sg */
